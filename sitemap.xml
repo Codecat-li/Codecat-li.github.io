@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2023/03/08/markdowmGrammar/</loc>
+    
+    <lastmod>2023-04-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2023/03/19/hexoUseGuide/</loc>
+    
+    <lastmod>2023-04-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2023/04/05/this%E4%B8%8E%E8%8A%82%E6%B5%81%E9%98%B2%E6%8A%96/</loc>
     
     <lastmod>2023-04-05</lastmod>
@@ -95,24 +113,6 @@
     <loc>http://example.com/2023/03/20/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98%E4%B8%8E%E5%86%92%E6%B3%A1/</loc>
     
     <lastmod>2023-03-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2023/03/08/markdowmGrammar/</loc>
-    
-    <lastmod>2023-03-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2023/03/19/hexoUseGuide/</loc>
-    
-    <lastmod>2023-03-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
