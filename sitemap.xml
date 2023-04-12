@@ -2,6 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2023/04/10/Git/</loc>
+    
+    <lastmod>2023-04-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2023/04/09/HTTP%E5%8D%8F%E8%AE%AE%E4%B8%8E%E8%B7%A8%E5%9F%9F/</loc>
+    
+    <lastmod>2023-04-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2023/04/05/ajax%E4%BB%A5%E5%8F%8Aaxios%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82/</loc>
+    
+    <lastmod>2023-04-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2023/04/06/xhrHttp%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</loc>
+    
+    <lastmod>2023-04-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2023/03/12/%E4%BA%8B%E4%BB%B6%E4%B8%8E%E5%87%BD%E6%95%B0/</loc>
     
     <lastmod>2023-04-07</lastmod>
@@ -14,24 +50,6 @@
     <loc>http://example.com/2023/03/19/webFoundation/</loc>
     
     <lastmod>2023-04-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2023/04/06/xhrHttp%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</loc>
-    
-    <lastmod>2023-04-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2023/04/05/ajax%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82/</loc>
-    
-    <lastmod>2023-04-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -148,7 +166,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2023-04-07</lastmod>
+    <lastmod>2023-04-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
