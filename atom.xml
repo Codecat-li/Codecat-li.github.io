@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-04-12T02:58:37.046Z</updated>
+  <updated>2023-04-16T09:10:04.285Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,68 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue脚手架配置</title>
+    <link href="http://example.com/2023/04/16/vue%E8%84%9A%E6%89%8B%E6%9E%B6%E9%85%8D%E7%BD%AE/"/>
+    <id>http://example.com/2023/04/16/vue%E8%84%9A%E6%89%8B%E6%9E%B6%E9%85%8D%E7%BD%AE/</id>
+    <published>2023-04-16T02:16:49.091Z</published>
+    <updated>2023-04-16T09:10:04.285Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="初始化脚手架"><a href="#初始化脚手架" class="headerlink" title="初始化脚手架"></a>初始化脚手架</h4><pre><code class="hljs plaintext">1.全局安装脚手架npm install -g @vue/cli2.切换到要创建项目的目录后创建项目vue create 项目名称3.启动项目npm run serve配置国内镜像：npm config set registryhttps://registry.npm.taobao.org查询webpack相关配置：vue inspect &gt; output.js</code></pre><h4 id="脚手架文件结构"><a href="#脚手架文件结构" class="headerlink" title="脚手架文件结构"></a>脚手架文件结构</h4><p>public:index.html、icoy页签图标和主页面</p><p>src:</p><ul><li>assets：存放静态资源</li><li>component:存放组件</li><li>app.vue：汇总组件</li><li>main.js:入口文件</li><li>packag-lock.json:包版本控制文件</li><li>vue.config.js:脚手架配置文件</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;初始化脚手架&quot;&gt;&lt;a href=&quot;#初始化脚手架&quot; class=&quot;headerlink&quot; title=&quot;初始化脚手架&quot;&gt;&lt;/a&gt;初始化脚手架&lt;/h4&gt;&lt;pre&gt;&lt;code class=&quot;hljs plaintext&quot;&gt;1.全局安装脚手架
+npm install -</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>VUE组件的基本结构</title>
+    <link href="http://example.com/2023/04/14/vue%E7%BB%84%E4%BB%B6/"/>
+    <id>http://example.com/2023/04/14/vue%E7%BB%84%E4%BB%B6/</id>
+    <published>2023-04-14T07:31:44.320Z</published>
+    <updated>2023-04-16T02:11:40.795Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="vue组件"><a href="#vue组件" class="headerlink" title="vue组件"></a>vue组件</h3><p>组件可以解决传统开发中文件依赖不容易维护，可能发生冲突的问题。同时可以增加代码的复用率。</p><p>组件是用来实现局部（特定）功能的代码集合。</p><p>实际开发中由vm管理app组件，app组件嵌套其他所有组件。</p><h4 id="非单文件组件"><a href="#非单文件组件" class="headerlink" title="非单文件组件"></a>非单文件组件</h4><pre><code class="hljs vue">&lt;body&gt;  &lt;div id=&quot;root&quot;&gt;    &lt;school&gt;&lt;/school&gt;  &lt;/div&gt;&lt;/body&gt;&lt;script&gt;  const school = Vue.extend(&#123;    template: `      &lt;div&gt;        &lt;h2&gt;学校名称：&#123;&#123;schoolName&#125;&#125;&lt;/h2&gt;        &lt;h2&gt;学校地址：&#123;&#123;address&#125;&#125;&lt;/h2&gt;      &lt;/div&gt;`,    data() &#123;      return &#123;        schoolName: &#x27;上鬼狐&#x27;,        address: &#x27;北京昌平&#x27;      &#125;&#125;&#125;)  new Vue(&#123;    el: &#x27;#root&#x27;,    components: &#123;      school,      student    &#125;&#125;)&lt;/script&gt;</code></pre><p>####VueComponent构造函数</p><p>组件本质是一个VueComponent构造函数，Vue解析的时候会帮我们创建组件同名的构造函数。每次调用Vue.extend返回的都是一个全新的VueComponent。</p><h5 id="关于this的指向"><a href="#关于this的指向" class="headerlink" title="关于this的指向"></a>关于this的指向</h5><ul><li><p>组件配置中：data、methods、watch、computed中的函数均指向【VueComponent】</p></li><li><p>new Vue()中：data、methods、watch、computed中的函数均指向【Vue实例对象（vm）】</p></li><li><p>VueComponent有的功能vm都有，但是vm可以绑定el。</p></li><li><p>VueComponent.prototype.<strong>proto</strong>&#x3D;&#x3D;&#x3D;Vue.prototype</p></li></ul><h4 id="单文件组件"><a href="#单文件组件" class="headerlink" title="单文件组件"></a>单文件组件</h4><p>一个单文件组件包含一下结构：</p><pre><code class="hljs vue">&lt;template&gt;  &lt;div&gt;     &lt;/div&gt;&lt;/template&gt;&lt;script&gt;    import 其他组件 from &#x27;url&#x27;//不必要    export default&#123;        name:&#x27;组件名称&#x27;,        components:&#123;&#125;,//不必要        data()&#123;            retun&#123;&#125;        &#125;,        methods:&#123;&#125;    &#125;&lt;/script&gt;&lt;style&gt;&lt;/style&gt;</code></pre><p>所有的组件都遵从vm的管理，我们用main.js来管理</p><pre><code class="hljs vue">import App from &#x27;url&#x27;new Vue(&#123;el:&#x27;#容器id&#x27;, components:&#123;APP&#125;&#125;)</code></pre><p>我们还需要一个index.html文件来做容器</p><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;en&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>只显示了基本结构，删除了无关代码<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;../vue.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;./main.js&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>    <span class="hljs-comment">&lt;!--容器--&gt;</span>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;root&quot;</span>&gt;</span>    <span class="hljs-tag">&lt;<span class="hljs-name">school</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">school</span>&gt;</span>  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;vue组件&quot;&gt;&lt;a href=&quot;#vue组件&quot; class=&quot;headerlink&quot; title=&quot;vue组件&quot;&gt;&lt;/a&gt;vue组件&lt;/h3&gt;&lt;p&gt;组件可以解决传统开发中文件依赖不容易维护，可能发生冲突的问题。同时可以增加代码的复用率。&lt;/p&gt;
+&lt;p&gt;组件是用来实</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>VUE生命周期</title>
+    <link href="http://example.com/2023/04/13/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
+    <id>http://example.com/2023/04/13/vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/</id>
+    <published>2023-04-13T12:39:48.305Z</published>
+    <updated>2023-04-14T07:19:13.578Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="VUE生命周期"><a href="#VUE生命周期" class="headerlink" title="VUE生命周期"></a>VUE生命周期</h3><h4 id="挂载流程"><a href="#挂载流程" class="headerlink" title="挂载流程"></a>挂载流程</h4><p>在此之前创建生命周期、事件。</p><ol><li><p>beforeCreate:此时无法通过vm访问到data中的数据，methods中的方法。</p><p>在此之后创建数据检测、数据代理。</p></li><li><p>created:此时可以通过vm访问到data中的数据、methods中的配置的方法。</p></li><li><p>beforeMount：页面未经vue编译的DOM结构，对所有DOM操作最终不生效。（被虚拟dom覆盖了）</p></li><li><p>mounted:页面呈现经过Vue编译的DOM，对DMO的操作均有效但应该避免。至此初始化过程结束，一半在此阶段进行：开启定时器，发送网络请求，订阅消息，绑定自定义事件等初始化操作。</p></li></ol><h4 id="更新流程"><a href="#更新流程" class="headerlink" title="更新流程"></a>更新流程</h4><ol><li><p>beforUpdate：此时页面和数据尚未保持同步。</p></li><li><p>生成新的虚拟DOM和旧的对比，完成模型到视图的更新。</p></li><li><p>updated：此时页面和数据保持同步.</p></li></ol><h4 id="销毁流程"><a href="#销毁流程" class="headerlink" title="销毁流程"></a>销毁流程</h4><ol><li>beforeDestory:此时，vm中所有的：data、methouds、指令都处于可用状态，马上要执行销毁过程。但不会再触发更新了。一般在这个状态关闭定时器，取消订阅消息，解绑自定义事件。</li><li>destory:销毁vm实例。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;VUE生命周期&quot;&gt;&lt;a href=&quot;#VUE生命周期&quot; class=&quot;headerlink&quot; title=&quot;VUE生命周期&quot;&gt;&lt;/a&gt;VUE生命周期&lt;/h3&gt;&lt;h4 id=&quot;挂载流程&quot;&gt;&lt;a href=&quot;#挂载流程&quot; class=&quot;headerlink&quot; titl</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>使用Git控制版本</title>
@@ -378,27 +440,6 @@ hexo d
       
       
     <summary type="html">&lt;h1 id=&quot;事件与函数&quot;&gt;&lt;a href=&quot;#事件与函数&quot; class=&quot;headerlink&quot; title=&quot;事件与函数&quot;&gt;&lt;/a&gt;事件与函数&lt;/h1&gt;&lt;h2 id=&quot;事件&quot;&gt;&lt;a href=&quot;#事件&quot; class=&quot;headerlink&quot; title=&quot;事件&quot;&gt;&lt;/a&gt;事</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>markdown语法</title>
-    <link href="http://example.com/2023/03/08/markdowmGrammar/"/>
-    <id>http://example.com/2023/03/08/markdowmGrammar/</id>
-    <published>2023-03-08T08:50:44.887Z</published>
-    <updated>2023-04-05T01:48:00.627Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h1><p>标题用#号来表示，#的个数增加，级数往下递增</p><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h1 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h1><p><strong>加粗</strong>  （使用**包裹）</p><p><em>斜体</em>      （ 使用*包裹）</p><p><em><strong>斜体加粗</strong></em> （使用***包裹）</p><p><del>删除线</del> （使用~~包裹）</p><p>&#x3D;&#x3D;高亮&#x3D;&#x3D;（使用&#x3D;&#x3D;包裹）</p><p>我是^上标^ （使用^包裹）</p><p>我是<del>下标</del> （使用~包裹）</p><h1 id="三、列表"><a href="#三、列表" class="headerlink" title="三、列表"></a>三、列表</h1><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><ul><li>一二三四五</li></ul><ul><li>一二三四五 （开头携带 +或者*接空格)</li></ul><h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><ol><li>一二三四五</li><li>上山打老虎（就是1.接空格）</li></ol><h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p>| Mon    | TUE    | WED    | THU    | FRI    |</p><p>| —— | —— | —— | —— | —— |</p><p>| 上山   | 上山   | 上山   | 上山   | 上山   |</p><p>| 打老虎 | 打老虎 | 打老虎 | 打老虎 | 打老虎 |</p><h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p>使用&gt;表示，个数越多，字体越大</p><blockquote><p>一二三四五</p><blockquote><p>上山打老虎</p><blockquote><p>老虎没打到</p><blockquote><p>打到小松鼠</p></blockquote></blockquote></blockquote></blockquote><h1 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h1><hr><p>（就是虚线）</p><h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><p><code>我是代码</code>（使用&#96;包裹）</p><p>（使用 &#96;&#96;&#96;接语言类型）</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;一、标题&quot;&gt;&lt;a href=&quot;#一、标题&quot; class=&quot;headerlink&quot; title=&quot;一、标题&quot;&gt;&lt;/a&gt;一、标题&lt;/h1&gt;&lt;p&gt;标题用#号来表示，#的个数增加，级数往下递增&lt;/p&gt;
-&lt;h1 id=&quot;一级标题&quot;&gt;&lt;a href=&quot;#一级标题&quot; class</summary>
       
     
     
