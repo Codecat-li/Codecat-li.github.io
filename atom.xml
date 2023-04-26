@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-04-26T14:17:34.475Z</updated>
+  <updated>2023-04-26T15:30:46.670Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,8 +21,16 @@
     <link href="http://example.com/2023/04/26/%E6%95%B0%E7%BB%84/"/>
     <id>http://example.com/2023/04/26/%E6%95%B0%E7%BB%84/</id>
     <published>2023-04-26T14:17:12.336Z</published>
-    <updated>2023-04-26T14:17:34.475Z</updated>
+    <updated>2023-04-26T15:30:46.670Z</updated>
     
+    <content type="html"><![CDATA[<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>数组是数据的集合</p><h3 id="数组的分类"><a href="#数组的分类" class="headerlink" title="数组的分类"></a>数组的分类</h3><ul><li>number&#x2F;</li></ul><h3 id="数组的操作"><a href="#数组的操作" class="headerlink" title="数组的操作"></a>数组的操作</h3><pre><code class="hljs javascript"><span class="hljs-comment">//创建数组</span><span class="hljs-keyword">let</span> arr = [<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>]<span class="hljs-comment">//另一种方式:let arr = new Array(1,2,3)</span><span class="hljs-comment">//常用的方法</span>arr.<span class="hljs-title function_">push</span>(<span class="hljs-number">4</span>)<span class="hljs-comment">// 添加到最后一个元素</span>arr.<span class="hljs-title function_">pop</span>(<span class="hljs-number">4</span>) <span class="hljs-comment">// 删除最后一个元素</span>arr.<span class="hljs-title function_">unshift</span>(<span class="hljs-number">1</span>)<span class="hljs-comment">//添加到第一个元素</span>arr.<span class="hljs-title function_">shift</span>()<span class="hljs-comment">//删除第一个元素</span>arr.<span class="hljs-title function_">splice</span>(<span class="hljs-number">0</span>,<span class="hljs-number">2</span>,<span class="hljs-number">4</span>)<span class="hljs-comment">//从第0个开始，删去2个元素,在删除的位置加一个元素：4</span>arr.<span class="hljs-title function_">sort</span>(<span class="hljs-function">(<span class="hljs-params">x, y</span>)=&gt;</span>x - y)<span class="hljs-comment">//数组自带的排序，x-y正序，y-x逆序。</span>arr.<span class="hljs-title function_">concat</span>(arr2)<span class="hljs-comment">//连接2个数组</span></code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;数组&quot;&gt;&lt;a href=&quot;#数组&quot; class=&quot;headerlink&quot; title=&quot;数组&quot;&gt;&lt;/a&gt;数组&lt;/h2&gt;&lt;p&gt;数组是数据的集合&lt;/p&gt;
+&lt;h3 id=&quot;数组的分类&quot;&gt;&lt;a href=&quot;#数组的分类&quot; class=&quot;headerlink&quot; title=</summary>
+      
     
     
     
