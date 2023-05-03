@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-04-26T15:30:46.670Z</updated>
+  <updated>2023-05-03T15:03:31.016Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue路由</title>
+    <link href="http://example.com/2023/05/03/%E8%B7%AF%E7%94%B1/"/>
+    <id>http://example.com/2023/05/03/%E8%B7%AF%E7%94%B1/</id>
+    <published>2023-05-03T06:31:18.929Z</published>
+    <updated>2023-05-03T15:03:31.016Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h3><p>路由是一组映射关系（key—value）,key是路径，value是组件或者函数。</p><h3 id="路由的分类"><a href="#路由的分类" class="headerlink" title="路由的分类"></a>路由的分类</h3><ol><li><p>后端路由：</p><ul><li>理解：value是函数，用于处理客户端的请求。</li><li>工作过程：服务器收到请求后，根据请求路径来匹配函数处理请求，返回响应数据。</li></ul></li><li><p>前端路由：</p><ul><li><p>理解：value是组件，用于展示页面。</p></li><li><p>工作过程：当浏览器改变路径时，显示对应组件。</p></li></ul></li></ol><h3 id="基础路由配置"><a href="#基础路由配置" class="headerlink" title="基础路由配置"></a>基础路由配置</h3><pre><code class="hljs vue">安装vue-routernpm i vue-router@版本号-------router/index.jsimport VueRouter from &quot;vue-router&quot;;import Home from &quot;@/components/Home.vue&quot;;import About from &quot;@/components/About.vue&quot;;//配置路由组件export default new VueRouter(&#123;  routes: [&#123;    path: &quot;/Home&quot;,    component: Home  &#125;,  &#123;    path: &quot;/About&quot;,    component: About  &#125;,  ]&#125;)-------main.jsimport Vue from &quot;vue&quot;;import App from &quot;./App.vue&quot;;import VueRouter from &quot;vue-router&quot;;import router from &quot;./router&quot;;Vue.config.productionTip = false;//导入router组件Vue.use(VueRouter)new Vue(&#123;  render: (h) =&gt; h(App),  router: router,&#125;).$mount(&quot;#app&quot;);----------App.vue//切换路由链接&lt;router-link class=&quot;list-group-item&quot; active-class=&quot;active&quot; to=&quot;About&quot;&gt;About&lt;/router-link&gt;&lt;router-link class=&quot;list-group-item&quot; active-class=&quot;active&quot; to=&quot;Home&quot;&gt;Home&lt;/router-link&gt;//要展示的区域 &lt;router-view&gt;&lt;/router-view&gt;</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;路由&quot;&gt;&lt;a href=&quot;#路由&quot; class=&quot;headerlink&quot; title=&quot;路由&quot;&gt;&lt;/a&gt;路由&lt;/h3&gt;&lt;p&gt;路由是一组映射关系（key—value）,key是路径，value是组件或者函数。&lt;/p&gt;
+&lt;h3 id=&quot;路由的分类&quot;&gt;&lt;a href=&quot;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Vue路由</title>
+    <link href="http://example.com/2023/05/03/Vue%E8%B7%AF%E7%94%B1/"/>
+    <id>http://example.com/2023/05/03/Vue%E8%B7%AF%E7%94%B1/</id>
+    <published>2023-05-03T06:28:45.046Z</published>
+    <updated>2023-05-03T06:29:35.435Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>数组</title>
@@ -389,51 +423,6 @@ npm install -</summary>
       
       
     <summary type="html">&lt;h1 id=&quot;JavaScript-原型&quot;&gt;&lt;a href=&quot;#JavaScript-原型&quot; class=&quot;headerlink&quot; title=&quot;JavaScript 原型&quot;&gt;&lt;/a&gt;JavaScript 原型&lt;/h1&gt;&lt;h2 id=&quot;构造函数&quot;&gt;&lt;a href=&quot;#构造函数&quot;</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>vue属性</title>
-    <link href="http://example.com/2023/03/28/vue%E5%B1%9E%E6%80%A7/"/>
-    <id>http://example.com/2023/03/28/vue%E5%B1%9E%E6%80%A7/</id>
-    <published>2023-03-28T07:01:14.117Z</published>
-    <updated>2023-03-29T01:37:49.078Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="vue实例"><a href="#vue实例" class="headerlink" title="vue实例"></a>vue实例</h3><pre><code class="hljs vue">new Vue(&#123;&lt;!--vue渲染的对象 --&gt;   el: &#x27;#root&#x27;,&lt;!--存放数据属性 --&gt;   data: &#123;&#125;,&lt;!--函数属性 --&gt;   methods: &#123;&#125;,&lt;!--计算属性 --&gt;   computed: &#123;&#125;,&lt;!--侦听属性 --&gt;watch: &#123;&#125;&#125;)</code></pre><h3 id="数据绑定"><a href="#数据绑定" class="headerlink" title="数据绑定"></a>数据绑定</h3><ol><li>单向绑定：v-bind:，v-bind：value等可简写为：value</li><li>双向绑定：v-model:,一般应用在表单类元素上，v-model:value可简写为v-model</li></ol><p>###VUE中的MVVM模型</p><ol><li><p>M是模型，Model：对应data中的数据。</p></li><li><p>V是视图，View：模板。</p></li><li><p>VM是视图模型，ViewModel:Vue的实例对象。</p><p>例如：</p><ul><li><p>网页就是View（DOM）</p></li><li><p>VUE实例就是ViewModel（DOM监听，数据绑定）</p></li><li><p>VUE实例中的数据就是Model（一般js对象）</p></li></ul></li></ol><h3 id="Object-defineProperrty-默认属性"><a href="#Object-defineProperrty-默认属性" class="headerlink" title="Object.defineProperrty 默认属性"></a>Object.defineProperrty 默认属性</h3><pre><code class="hljs javascript"><span class="hljs-title class_">Object</span>.<span class="hljs-title function_">defineProperrty</span>(person,<span class="hljs-string">&#x27;age&#x27;</span>,&#123;    <span class="hljs-attr">value</span>:<span class="hljs-number">18</span>,    <span class="hljs-attr">enumberable</span>:<span class="hljs-literal">true</span>,<span class="hljs-comment">//控制属性是否可以枚举，默认是false。</span>    <span class="hljs-attr">writable</span>:<span class="hljs-literal">true</span>,<span class="hljs-comment">//控制属性是否可以被修改，默认值是false。</span>    <span class="hljs-attr">configurable</span>:<span class="hljs-literal">true</span><span class="hljs-comment">//控制属性是否可以被删除，默认值是false。</span>    <span class="hljs-comment">//当有人读取person的age属性时，get函数（getter)就会被调用，且返回值就是age的值。</span>    <span class="hljs-title function_">get</span>(<span class="hljs-params"></span>)&#123;<span class="hljs-keyword">return</span> number&#125;,    <span class="hljs-comment">//当有人修改person的age属性时，set函数（setter)就会被调用，且会收到修改的具体值。</span>    <span class="hljs-title function_">set</span>(<span class="hljs-params"></span>)&#123;number = value&#125;&#125;)</code></pre><h3 id="数据代理"><a href="#数据代理" class="headerlink" title="数据代理"></a>数据代理</h3><pre><code class="hljs javascript"><span class="hljs-comment">//通过一个对象代理另一个对象中的属性的操作</span><span class="hljs-keyword">let</span> obj = &#123;<span class="hljs-attr">x</span>:<span class="hljs-number">100</span>&#125;<span class="hljs-keyword">let</span> obj2 = &#123;<span class="hljs-attr">y</span>:<span class="hljs-number">200</span>&#125;object.<span class="hljs-title function_">defineProperty</span>(obj2,<span class="hljs-string">&#x27;x&#x27;</span>,&#123;    <span class="hljs-title function_">get</span>(<span class="hljs-params"></span>)&#123;<span class="hljs-keyword">return</span> obj.<span class="hljs-property">x</span>&#125;,    <span class="hljs-title function_">set</span>(<span class="hljs-params">value</span>)&#123;obj.<span class="hljs-property">x</span> = value&#125;&#125;)</code></pre><ol><li>Vue中的数据代理：通过VM对象来代理data对象中的属性操作（读写）</li><li>Vue中数据代理的好处：更加方便的操作data中的数据，不需要通过_ data.属性的方式调用，可以直接调用名字。</li><li>基本原理：通过object.defineProperty（）把data对象中所有属性添加到vm上。为每一个添加到vm上的属性，都指定一个getter和setter。在getter和setter内部去操作（读写）data中对应的属性。</li></ol><h3 id="事件修饰"><a href="#事件修饰" class="headerlink" title="事件修饰"></a>事件修饰</h3><pre><code class="hljs vue">&lt;!--阻止默认事件--&gt;例如@click.prevent,即preventDefault,会阻止标签自带的行为（例如a标签链接跳转）&lt;!--阻止冒泡--&gt;例如@click.stop,即stopPropagation,会阻止事件在父容器上再次触发。&lt;!--事件止触发一次--&gt;例如@click.once&lt;!--捕获模式--&gt;例如@click.capture,可以在捕获阶段触发函数，先捕获后冒泡&lt;!--只有event.target是当前操作的元素时才触发的事件--&gt;例如@click.self,也可以阻止冒泡&lt;!--事件的默认行为立即执行，无需等待事件回调执行完毕--&gt;@scroll:滚动条，@wheel：鼠标滚轮，后接.passive可以立即直接滚动，不会等着滚轮行为停止才开始滚动。</code></pre><h3 id="键盘事件"><a href="#键盘事件" class="headerlink" title="键盘事件"></a>键盘事件</h3><pre><code class="hljs vue">&lt;!--@keydown--&gt;&lt;!--@keyup--&gt;&lt;!--别名的使用：--&gt;@keydown.enter&lt;!--常用别名:enter,delete,esc,space,tab(必须配合kedown),up,down,left,right,系统修饰键alt,ctrl，shift等配合kedown使用。--&gt;&lt;!--自定义别名：--&gt;&lt;!--Vue.config.keyCodes.自定义别名 = 键码--&gt;</code></pre><h3 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h3><p>计算属性：需要的属性不存在，需要通过计算获得出来。原理：通过object.defineProperty（）方法提供的getter和setter方法实现。</p><p>优势：与methods实现相比内部有缓存机制（复用）效率更高，调试更方便。</p><pre><code class="hljs vue">computed: &#123;    fullName: &#123;      get() &#123;return this.firstName + &#x27;-&#x27; + this.lastName&#125;,      set() &#123;const arr = value.split(&#x27;-&#x27;)        this.firstName = arr[0]        this.lastName = arr[1]&#125;&#125;&#125;</code></pre><p>get的作用：当有人读取fullName时，get就会被调用，且返回值就作为fullName的值。</p><p>get什么时候被调用？1.初次读取fullName时，2.所依赖的数据发生变化时。</p><p>如果计算属性需要修改，那必须写set去响应修改，且set中要引起计算时以来的。</p><h3 id="侦听属性"><a href="#侦听属性" class="headerlink" title="侦听属性"></a>侦听属性</h3><pre><code class="hljs vue">watch: &#123;      ishot: &#123;deep:true,//深度监视，监视每一项内容        immediate: true,//初始化时调用一下handler        handler(newValue, oldValue) &#123;          console.log(&#x27;info被修改了&#x27;)&#125;&#125;&#125;</code></pre><p>vue中默认不监测对象内部的改变，配置deep可以检测对象内部的改变。</p><p>vue自身可以检测对象内部的改变，但是watch默认不检测。</p><h3 id="计算属性和侦听属性对比"><a href="#计算属性和侦听属性对比" class="headerlink" title="计算属性和侦听属性对比"></a>计算属性和侦听属性对比</h3><ol><li><p>计算属性和侦听属性都能完成的同样的功能</p></li><li><p>但是侦听可以完成异步操作，计算不行。</p></li></ol><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ol><li>所有不被vue管理的函数，写出箭头函数时，this才指向vm或者组件实例对象。</li><li>所有被vue管理的函数，最好写成普通函数，这样this才指向vm或者组件实例对象。</li></ol><h3 id="绑定样式"><a href="#绑定样式" class="headerlink" title="绑定样式"></a>绑定样式</h3><pre><code class="hljs vue"> &lt;!-- ：class,绑定calss样式 适用于样式的类名不确定，需要动态指定。--&gt;&lt;div class=&quot;basic&quot; :class=&quot;classObj&quot;&gt;&#123;&#123;infos&#125;&#125;&lt;/div&gt; &lt;!-- ：style,绑定style样式 适用于样式的类名不确定，需要动态指定。--&gt;&lt;div style=&quot;basic&quot; :style=&quot;&#123;styleObj&#125;&quot;&gt;&#123;&#123;infos&#125;&#125;&lt;/div&gt;</code></pre><h3 id="条件渲染-列表渲染"><a href="#条件渲染-列表渲染" class="headerlink" title="条件渲染\列表渲染"></a>条件渲染\列表渲染</h3><ol><li><p>使用v-show做条件渲染，不显示时仍会渲染节点，时候频繁切换。</p></li><li><p>v-if也可以做条件渲染，不显示时完全不渲染，无法获取。（后面可以紧跟v-else-if、else不能分开），使用切换频率低的场景。</p></li><li><p>可以用template配合v-if,但不能和v-show配合</p></li><li><p>v-for&#x3D;’p in persons’类似for-in,需要绑定一个:key。可以遍历数组、对象、字符串（v-for&#x3D;’’of次数）</p><pre><code class="hljs vue">&lt;li v-for=&quot;p in persons&quot; :key=&#x27;p.id&#x27;&gt;&#123;&#123;p.name&#125;&#125;&lt;/li&gt;</code></pre><p>key 的原理：数据变化时会在vue的虚拟dom里对比，相同的直接复用，不同的才加载。所以要用唯一标志。</p><h1 id="vue监视数据原理"><a href="#vue监视数据原理" class="headerlink" title="vue监视数据原理"></a>vue监视数据原理</h1><ol><li><p>vue会检测data中所有层次的数据。</p></li><li><p>如何监测对象中的数据？</p><p>​通过setter实现监视，且要在new Vue时就传入要检测的数据。</p><p>​（1）对象中后追加的属性，Vue默认不响应式处理</p><p>​（2）如需给后添加的属性做响应式，请使用如下API：</p><p>Vue.set(target.propertyName&#x2F;index.value)或</p><p>vm.$set(target.propertName&#x2F;index.value)</p></li><li><p>通过setter实现监视，且要在new Vue时就传入要检测的数据。</p><p>（1）对象中后追加的属性，Vue默认不响应式处理</p><p>（2）如需给后添加的属性做响应式，请使用如下API：</p><p>Vue.set(target.propertyName&#x2F;index.value)或</p><p>vm.$set(target.propertName&#x2F;index.value)</p></li><li><p>在vue修改数组中的某个元素用如下方法：</p><p>使用APIs:push()、pop()、shift()、unshift()、splice()、sort()、reverse()</p><p>特别注意Vue.set()、vm.$set()不能给vm的根数据对象添加属性</p></li></ol></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;vue实例&quot;&gt;&lt;a href=&quot;#vue实例&quot; class=&quot;headerlink&quot; title=&quot;vue实例&quot;&gt;&lt;/a&gt;vue实例&lt;/h3&gt;&lt;pre&gt;&lt;code class=&quot;hljs vue&quot;&gt;new Vue(&amp;#123;&amp;lt;!--vue渲染的对象 --&amp;</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>移动页面判断正则表达式</title>
-    <link href="http://example.com/2023/03/22/%E7%A7%BB%E5%8A%A8%E9%A1%B5%E9%9D%A2%E6%AD%A3%E5%88%99/"/>
-    <id>http://example.com/2023/03/22/%E7%A7%BB%E5%8A%A8%E9%A1%B5%E9%9D%A2%E6%AD%A3%E5%88%99/</id>
-    <published>2023-03-22T08:13:48.123Z</published>
-    <updated>2023-03-23T13:20:31.766Z</updated>
-    
-    <content type="html"><![CDATA[<p>#navigator属性</p><p>常用属性和方法：navigator是对象，该对象下记录了浏览器自身的相关信息</p><ul><li>通过 userAgent 检测浏览器的版本及平台</li></ul><pre><code class="hljs javascript"><span class="hljs-comment">// 检测 userAgent（浏览器信息）</span>(<span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) &#123;  <span class="hljs-keyword">const</span> userAgent = navigator.<span class="hljs-property">userAgent</span>  <span class="hljs-comment">// 验证是否为Android或iPhone</span>  <span class="hljs-keyword">const</span> android = userAgent.<span class="hljs-title function_">match</span>(<span class="hljs-regexp">/(Android);?[\s\/]+([\d.]+)?/</span>)  <span class="hljs-keyword">const</span> iphone = userAgent.<span class="hljs-title function_">match</span>(<span class="hljs-regexp">/(iPhone\sOS)\s([\d_]+)/</span>)  <span class="hljs-comment">// 如果是Android或iPhone，则跳转至移动站点</span>  <span class="hljs-keyword">if</span> (android || iphone) &#123;    location.<span class="hljs-property">href</span> = <span class="hljs-string">&#x27;http://m.itcast.cn&#x27;</span>  &#125;&#125;)();</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;#navigator属性&lt;/p&gt;
-&lt;p&gt;常用属性和方法：navigator是对象，该对象下记录了浏览器自身的相关信息&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;通过 userAgent 检测浏览器的版本及平台&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&quot;hljs javasc</summary>
       
     
     
